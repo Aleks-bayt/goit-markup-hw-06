@@ -52,6 +52,7 @@ address {
 }
 .container {
   width: 320px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
@@ -59,8 +60,8 @@ address {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 /* =============== Header =============== */
 
@@ -217,16 +218,17 @@ address {
 
 /* ======== Strengths ======== */
 
-
 .Strengths-title {
 }
 .strengths-menu {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 72px;
 }
 .strengths-list {
-  max-width: 100%;
+width: 100%;
+max-width: 320px;
+margin: 0 auto;
 }
 .strengths-icon {
   display: none;
@@ -254,6 +256,11 @@ address {
 
 .team {
   background-color: #f4f4fd;
+  padding: 96px 28px;
+}
+.team > .container{
+ 
+  
 }
 .team-title {
   font-size: 36px;
@@ -267,18 +274,21 @@ address {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+  margin: 0 auto;
 }
 .team-list-item {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    width: 264px;
 }
 .team-item-cont {
   padding: 32px 0;
+  width: 264px;
 }
 
 .team-item-imag {
@@ -305,6 +315,7 @@ address {
   display: flex;
   justify-content: center;
   gap: 24px;
+  width: 100%;
 }
 
 .team-item-soc {
@@ -346,11 +357,9 @@ address {
 .porfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  gap: 48px;
 }
 .porfolio-list-item {
-  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -745,22 +754,25 @@ address {
   visibility: visible;
   pointer-events: auto;
 }
+
+/* ==========Adaptation============ */
+
 @media screen and (min-width: 768px) {
   .container {
-   width: 768px;
+    width: 768px;
+    max-width: 768px;
+    padding: 96px 108px;
   }
   .strengths {
     padding-top: 96px;
     padding-bottom: 96px;
-
   }
   .strengths-menu {
-    display: flex;
     flex-wrap: wrap;
-   gap: 72px 24px;
+    gap: 72px 24px;
   }
   .strengths-list {
-    width: calc((100%-24px)/2);
+    width: calc((100% - 24px) / 2);
   }
   .strengths-icon {
     display: none;
@@ -768,22 +780,33 @@ address {
   .strengths-list-title {
     text-align: left;
   }
+  .team-list {
+    
+    gap: 64px 24px;
+  }
+  .team-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .porfolio-list {
+    gap: 72px 24px;
+  }
+  .porfolio-list-item {
+    width: calc((100% - 24px) / 2);
 }
 
 @media screen and (min-width: 1158px) {
   .container {
+    width: 1158px;
     max-width: 1158px;
-    margin: 0 auto;
-    padding: 120px 156px;
+padding: 120px 15px;
   }
-  
+
   .strengths-menu {
-    display: flex;
+    flex-direction: row;
     gap: 24px;
   }
   .strengths-list {
-    
-    width: calc((100%-72px)/4);
+    width: calc((100% - 72px) / 4);
   }
   .strengths-icon {
     display: flex;
@@ -798,4 +821,13 @@ address {
   .strengths-list-title {
     text-align: left;
   }
+  .team-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .team-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .porfolio-list-item {
+    width: calc((100% - 48px) / 3);
 }
