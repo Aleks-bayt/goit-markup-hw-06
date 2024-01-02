@@ -119,7 +119,7 @@ address {
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.current {
+.heder-list-link.current {
   position: relative;
   color: #404bbf;
 }
@@ -228,9 +228,9 @@ address {
   gap: 72px;
 }
 .strengths-list {
-width: 100%;
-max-width: 320px;
-margin: 0 auto;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .strengths-icon {
   display: none;
@@ -280,10 +280,10 @@ margin: 0 auto;
 .team-list-item {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    width: 264px;
+  width: 264px;
 }
 .team-item-cont {
   padding: 32px 0;
@@ -432,7 +432,6 @@ margin: 0 auto;
   display: block;
   text-align: center;
   margin: 0 auto 16px auto;
- 
 }
 .footer-logo-color {
   color: #f4f4fd;
@@ -444,7 +443,6 @@ margin: 0 auto;
   letter-spacing: 0.02em;
   max-width: 264px;
 }
-
 
 .footer-wrap-logo {
   margin-bottom: 72px;
@@ -736,9 +734,9 @@ margin: 0 auto;
   color: #4d5ae5;
 }
 .modal-btn-send {
-display: block;
-min-width: 169px;
-height: 56px;
+  display: block;
+  min-width: 169px;
+  height: 56px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -751,7 +749,7 @@ height: 56px;
   border-radius: 4px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
 
 .is-open {
   opacity: 1;
@@ -784,7 +782,6 @@ height: 56px;
     text-align: left;
   }
   .team-list {
-    
     gap: 64px 24px;
   }
   .team-list-item {
@@ -795,32 +792,34 @@ height: 56px;
   }
   .porfolio-list-item {
     width: calc((100% - 24px) / 2);
-}
-.footer{
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-.footer-wrap{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 24px;
-}
-.footer-subscribe {
-  margin: 0;
-}
-.footer-logo {
-  text-align: left;
-}
-.footer-wrap-text{
-  text-align: left;
-}
-.footer-form-text{
-  text-align: left;
+  }
+  .footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .footer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+  }
+  .footer-subscribe {
+    margin: 0;
+  }
+  .footer-logo {
+    text-align: left;
+  }
+  .footer-wrap-text {
+    text-align: left;
+  }
+  .footer-form-text {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     width: 1158px;
+    min-width: 1158px;
   }
 
   .strengths-menu {
@@ -852,8 +851,86 @@ height: 56px;
   }
   .porfolio-list-item {
     width: calc((100% - 48px) / 3);
+  }
+  .footer-wrap {
+    display: flex;
+    align-items: baseline;
+  }
 }
-.footer-wrap {
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 72px 16px 40px;
+  background-color: #ffffff;
+}
+.mob-menu .menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7e9fc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.menu-btn-icon{
+  fill: #2E2F42;
+}
+.mob-menu-list {
+  margin-bottom: auto;
+}
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-menu-link {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+}
+.mob-menu-link.current {
+  color: #404bbf;
+}
+.mob-contact-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-contakt-link {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+.mob-contakt-link.accent {
+  color: #4d5ae5;
+}
+.mob-soc-list {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+.mob-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-soc-link {
+  fill: #f4f4fd;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
