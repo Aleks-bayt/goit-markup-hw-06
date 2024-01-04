@@ -57,8 +57,6 @@ address {
   max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section {
@@ -79,6 +77,7 @@ address {
 .heder-nav {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 .heder-logo {
   color: #4d5ae5;
@@ -88,7 +87,6 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
 }
 .logo-color {
   color: #2e2f42;
@@ -163,6 +161,25 @@ address {
   color: #404bbf;
 }
 
+@media screen and (max-width: 767.98px) {
+  .heder-nav-list,
+  .header-adres {
+    display: none;
+  }
+}
+.burger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border: none;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
 /* =============== hero ================= */
 .main {
 }
@@ -186,14 +203,16 @@ address {
 }
 .hero-title {
   color: #fff;
-  font-size: 56px;
+  font-size: 36px;
+  /* font-size: 56px; */
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  max-width: 496px;
+  max-width: 288px;
+  /* max-width: 496px; */
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .hero-btn {
   background-color: #4d5ae5;
@@ -258,8 +277,6 @@ address {
 
 .team {
   background-color: #f4f4fd;
-  padding-left: 108px;
-  padding-right: 108px;
 }
 .team-title {
   font-size: 36px;
@@ -764,6 +781,21 @@ address {
     width: 768px;
     max-width: 768px;
   }
+  .heder-logo {
+    margin-right: 122px;
+  }
+ 
+  .header-adres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .hero-title {
+    font-size: 56px; 
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
   .strengths {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -821,7 +853,18 @@ address {
     width: 1158px;
     min-width: 1158px;
   }
-
+  .heder-logo {
+    margin-right: 76px;
+  }
+  .header-adres-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-title {
+    margin-bottom: 36px;
+  }
   .strengths-menu {
     flex-direction: row;
     gap: 24px;
@@ -867,8 +910,15 @@ address {
   height: 100%;
   padding: 72px 16px 40px;
   background-color: #ffffff;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 300ms ease, visibiliti 300ms ease;
 }
-.mob-menu .menu-btn {
+.mob-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+.mob-menu.menu-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -880,8 +930,8 @@ address {
   width: 24px;
   height: 24px;
 }
-.menu-btn-icon{
-  fill: #2E2F42;
+.menu-btn-icon {
+  fill: #2e2f42;
 }
 .mob-menu-list {
   margin-bottom: auto;
