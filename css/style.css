@@ -193,13 +193,19 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/hero/mobhero@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1440px;
 }
-.hero-container {
+@media (min-resolution: 192dpi) {
+  .hero{
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/mobhero@2x.jpg);}
 }
 .hero-title {
   color: #fff;
@@ -802,6 +808,22 @@ address {
     margin-bottom: 36px;
     text-transform: none;
   }
+  .hero{
+   background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/tabhero@1x.jpg);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero{
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/tabhero@2x.jpg);
+    }
   .strengths {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -872,6 +894,22 @@ address {
     margin-bottom: 36px;
     text-transform: none;
   }
+  .hero{
+    background-image: linear-gradient(
+       rgba(46, 47, 66, 0.7),
+       rgba(46, 47, 66, 0.7)
+     ),
+     url(../images/hero/deskhero@1x.jpg);
+   }
+ 
+   @media (min-resolution: 192dpi) {
+     .hero{
+     background-image: linear-gradient(
+         rgba(46, 47, 66, 0.7),
+         rgba(46, 47, 66, 0.7)
+       ),
+       url(../images/hero/deskhero@2x.jpg);
+     }
   .strengths-menu {
     flex-direction: row;
     gap: 24px;
