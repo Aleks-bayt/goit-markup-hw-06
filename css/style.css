@@ -205,7 +205,8 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/mobhero@2x.jpg);}
+    url(../images/hero/mobhero@2x.jpg);
+  }
 }
 .hero-title {
   color: #fff;
@@ -824,6 +825,7 @@ address {
       ),
       url(../images/hero/tabhero@2x.jpg);
     }
+  }
   .strengths {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -910,6 +912,7 @@ address {
        ),
        url(../images/hero/deskhero@2x.jpg);
      }
+    }
   .strengths-menu {
     flex-direction: row;
     gap: 24px;
@@ -945,6 +948,9 @@ address {
     align-items: baseline;
   }
 }
+
+/* =====mob menu===== */
+
 .mob-menu {
   position: fixed;
   top: 0;
@@ -959,11 +965,11 @@ address {
   visibility: hidden;
   transition: transform 300ms ease, visibiliti 300ms ease;
 }
-.mob-menu.is-open {
+.mob-menu .is-open {
   transform: translateX(0);
   visibility: visible;
 }
-.mob-menu.menu-btn {
+.mob-menu .menu-btn {
   position: absolute;
   top: 24px;
   right: 24px;
